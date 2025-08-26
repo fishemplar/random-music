@@ -7,7 +7,15 @@
     <script>
         // 预设的网站列表，替换成你想要重定向的网站
         const websites = [
-             "https://www.bilibili.com"
+             "https://www.bilibili.com/video/BV1794y1t7nw"   //duvet
+             "https://www.bilibili.com/video/BV1794y1t7nw"   //
+             "https://www.bilibili.com/video/BV1794y1t7nw"
+             "https://www.bilibili.com/video/BV1794y1t7nw"
+             "https://www.bilibili.com/video/BV1794y1t7nw"
+             "https://www.bilibili.com/video/BV1794y1t7nw"
+             "https://www.bilibili.com/video/BV1794y1t7nw"
+             "https://www.bilibili.com/video/BV1794y1t7nw"
+             "https://www.bilibili.com/video/BV1794y1t7nw"
             // 可以继续添加更多网站
         ];
 
