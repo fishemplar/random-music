@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机跳转</title>
+    <script>
+        // 预设的网站列表，替换成你想要重定向的网站
+        const websites = [
+             "https://www.bilibili.com"
+            // 可以继续添加更多网站
+        ];
+
+        // 随机选择一个网站并立即重定向
+        function redirectRandomly() {
+            const randomIndex = Math.floor(Math.random() * websites.length);
+            const randomWebsite = websites[websites.length > 0 ? randomIndex : 0];
+            
+            // 立即重定向
+            window.location.href = randomWebsite;
+        }
+
+        // 页面加载完成后立即执行重定向
+        window.onload = redirectRandomly;
+    </script>
+</head>
+<body>
+    <!-- 页面内容为空，确保没有任何UI显示 -->
+    <noscript>
+        <!-- 对于禁用JavaScript的浏览器，显示备选链接 -->
+        <p>您的浏览器不支持JavaScript，无法自动跳转。</p>
+        <p>请选择一个链接访问：</p>
+        <ul id="websiteList"></ul>
+        <script>
+            // 这段脚本仅用于noscript标签内，为不支持JS的浏览器生成链接列表
+            const list = document.getElementById('websiteList');
+            websites.forEach(url => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = url;
+                a.textContent = url;
+                li.appendChild(a);
+                list.appendChild(li);
+            });
+        </script>
+    </noscript>
+</body>
+</html>
